@@ -41,7 +41,7 @@ else if (userPlay == 'rock' && pcPlay == "paper") {
 }
     //if rock beats scissors 
 else if (userPlay == 'rock' && pcPlay == "scissors") {
-     alert("Winner! Rock beats scissors");
+    alert("Winner! Rock beats scissors");
 }
     //if scissors lose to rock 
 else if (userPlay == 'scissors' && pcPlay == "rock") {
@@ -58,6 +58,8 @@ else if (userPlay == 'paper' && pcPlay == "scissors") {
     //if paper wins to rock
 else if (userPlay == 'paper' && pcPlay == "rock") {
     alert("Winner! paper beats rock");
+} else { 
+    alert("Invalid move, try again")
 }
 //display win or lose 
 
