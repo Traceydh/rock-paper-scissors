@@ -11,14 +11,16 @@ function computerPlay() {
     console.log(randomNum);
 
     if (randomNum === 0)  {
-        console.log('rock');
+        pcPlay = 'rock';
     }
         else if (randomNum === 1) {
-            console.log('paper');
+            pcPlay = 'paper';
         }
             else {
-                console.log('scissors');
+                pcPlay = 'scissors';
             }
+    console.log(pcPlay)
+    return pcPlay;
 }
 
 //ask human for their move 
@@ -26,7 +28,7 @@ function computerPlay() {
 //make move case insensitive 
 userPlay = prompt('Play your move');
 
-let computerPlay = computerPlay();
+computerPlay();
 
 //convert user play to numbers 
 if (userPlay === 'rock') {
