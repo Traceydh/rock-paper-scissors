@@ -32,13 +32,33 @@ computerPlay();
 
 //compare the plays between human and computer 
     //if same tie 
-
-    //if rock beats scissors 
+if (userPlay === pcPlay) {
+    alert("Tie! No winner or loser");
+}
     //if rock loses paper 
+else if (userPlay == 'rock' && pcPlay == "paper") {
+    alert("Loser! Rock loses to paper");
+}
+    //if rock beats scissors 
+else if (userPlay == 'rock' && pcPlay == "scissors") {
+     alert("Winner! Rock beats scissors");
+}
     //if scissors lose to rock 
-    //if scissors lose to rock 
+else if (userPlay == 'scissors' && pcPlay == "rock") {
+    alert("Loser! scissors loses to rock");
+}
+    //if scissors wins to paper
+else if (userPlay == 'scissors' && pcPlay == "paper") {
+    alert("Winner! scissors beats paper");
+}   
     //if paper lose to scissors
+else if (userPlay == 'paper' && pcPlay == "scissors") {
+    alert("Loser! paper loses to scissors");
+}
     //if paper wins to rock
+else if (userPlay == 'paper' && pcPlay == "rock") {
+    alert("Winner! paper beats rock");
+}
 //display win or lose 
 
 
