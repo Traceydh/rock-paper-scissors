@@ -25,12 +25,16 @@ function computerPlay() {
 
 //ask human for their move 
 //human enters rock paper or scissors 
+userPlayCaseSensitive = prompt('Play your move');
+
 //make move case insensitive 
-userPlay = prompt('Play your move');
+userPlay = userPlayCaseSensitive.toLowerCase();
+
 
 computerPlay();
 
 //compare the plays between human and computer 
+//display win or lose 
     //if same tie 
 if (userPlay === pcPlay) {
     alert("Tie! No winner or loser");
@@ -61,7 +65,7 @@ else if (userPlay == 'paper' && pcPlay == "rock") {
 } else { 
     alert("Invalid move, try again")
 }
-//display win or lose 
+
 
 
 
