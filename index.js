@@ -28,30 +28,38 @@ function playRound(playerSelection, computerSelection) {
     //if same tie 
     if (playerSelection === computerSelection) {
         alert("Tie! No winner or loser");
+        console.log('Tie');
     }
         //if rock loses paper 
     else if (playerSelection == 'rock' && computerSelection == "paper") {
         alert("Computer played " + computerSelection + "\n Loser! Rock loses to paper");
+        console.log('Loss');
+        
     }
         //if rock beats scissors 
     else if (playerSelection == 'rock' && computerSelection == "scissors") {
         alert("Computer played " + computerSelection + "\n Winner! Rock beats scissors");
+        console.log('Win');
     }
         //if scissors lose to rock 
     else if (playerSelection == 'scissors' && computerSelection == "rock") {
         alert("Computer played " + computerSelection + "\n Loser! scissors loses to rock");
+        console.log('Loss');
     }
         //if scissors wins to paper
     else if (playerSelection == 'scissors' && computerSelection == "paper") {
         alert("Computer played " + computerSelection + "\n Winner! scissors beats paper");
+        console.log('Win');
     }   
         //if paper lose to scissors
     else if (playerSelection == 'paper' && computerSelection == "scissors") {
         alert("Computer played " + computerSelection + "\n Loser! paper loses to scissors");
+        console.log('Loss');
     }
         //if paper wins to rock
     else if (playerSelection == 'paper' && computerSelection == "rock") {
         alert("Computer played " + computerSelection + "\n Winner! paper beats rock");
+        console.log('Win');
     } else { 
         alert("Invalid move, try again")
     }
@@ -62,11 +70,13 @@ function playRound(playerSelection, computerSelection) {
 
 //Iterate game 5 times 
 for (let i = 0; i < 5; i++) {
+    //generate random computer move 
     const computerSelection = computerPlay();
     //ask human for their move 
     let playerSelectionCaseSensitive = prompt('Play your move');
     //make move case insensitive 
     let playerSelection = playerSelectionCaseSensitive.toLowerCase();
+    //Execute game 
     playRound(playerSelection, computerSelection);
 }
 
