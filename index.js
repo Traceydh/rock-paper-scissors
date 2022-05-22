@@ -8,7 +8,6 @@ function getRandomInt(max) {
 //randomly choose a variable 
 function computerPlay() {
     let randomNum = getRandomInt(3);
-    console.log(randomNum);
 
     if (randomNum === 0)  {
         pcPlay = 'rock';
@@ -23,6 +22,7 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    
     //compare the plays between human and computer 
     //display win or lose 
     //if same tie 
@@ -58,23 +58,22 @@ function playRound(playerSelection, computerSelection) {
     
 
   }
-  
-//instead of this const playerSelection = "rock" ask human for their move 
-let playerSelectionCaseSensitive = prompt('Play your move');
-//make move case insensitive 
-let playerSelection = playerSelectionCaseSensitive.toLowerCase();
-const computerSelection = computerPlay();
-
-//Play one round of game
-console.log(playRound(playerSelection, computerSelection));
 
 
 //Iterate game 5 times 
 for (let i = 0; i < 5; i++) {
-    
- }
+    const computerSelection = computerPlay();
+    //ask human for their move 
+    let playerSelectionCaseSensitive = prompt('Play your move');
+    //make move case insensitive 
+    let playerSelection = playerSelectionCaseSensitive.toLowerCase();
+    playRound(playerSelection, computerSelection);
+}
+
+
+
 //save and display outcome 
-console.log()
+
 //Count wins and losses 
 //display win or losses 
 
