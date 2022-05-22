@@ -19,7 +19,6 @@ function computerPlay() {
             else {
                 pcPlay = 'scissors';
             }
-    console.log(pcPlay)
     return pcPlay;
 }
 
@@ -32,27 +31,27 @@ function playRound(playerSelection, computerSelection) {
     }
         //if rock loses paper 
     else if (playerSelection == 'rock' && computerSelection == "paper") {
-        alert("Computer played " + pcPlay + "\n Loser! Rock loses to paper");
+        alert("Computer played " + computerSelection + "\n Loser! Rock loses to paper");
     }
         //if rock beats scissors 
     else if (playerSelection == 'rock' && computerSelection == "scissors") {
-        alert("Computer played " + pcPlay + "\n Winner! Rock beats scissors");
+        alert("Computer played " + computerSelection + "\n Winner! Rock beats scissors");
     }
         //if scissors lose to rock 
     else if (playerSelection == 'scissors' && computerSelection == "rock") {
-        alert("Computer played " + pcPlay + "\n Loser! scissors loses to rock");
+        alert("Computer played " + computerSelection + "\n Loser! scissors loses to rock");
     }
         //if scissors wins to paper
     else if (playerSelection == 'scissors' && computerSelection == "paper") {
-        alert("Computer played " + pcPlay + "\n Winner! scissors beats paper");
+        alert("Computer played " + computerSelection + "\n Winner! scissors beats paper");
     }   
         //if paper lose to scissors
     else if (playerSelection == 'paper' && computerSelection == "scissors") {
-        alert("Computer played " + pcPlay + "\n Loser! paper loses to scissors");
+        alert("Computer played " + computerSelection + "\n Loser! paper loses to scissors");
     }
         //if paper wins to rock
     else if (playerSelection == 'paper' && computerSelection == "rock") {
-        alert("Computer played " + pcPlay + "\n Winner! paper beats rock");
+        alert("Computer played " + computerSelection + "\n Winner! paper beats rock");
     } else { 
         alert("Invalid move, try again")
     }
@@ -66,6 +65,7 @@ let playerSelectionCaseSensitive = prompt('Play your move');
 let playerSelection = playerSelectionCaseSensitive.toLowerCase();
 const computerSelection = computerPlay();
 
+//Play one round of game 
 console.log(playRound(playerSelection, computerSelection));
 
 
