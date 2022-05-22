@@ -88,14 +88,11 @@ for (let i = 0; i < 5; i++) {
     let playerSelection = playerSelectionCaseSensitive.toLowerCase();
     //Execute game 
     playRound(playerSelection, computerSelection);
-    console.log(loss);
-    console.log(win);
 }
 
-
-
-//save and display outcome 
-
-//Count wins and losses 
-//display win or losses 
-
+//Display final outcome of win or loss
+ if (win > loss) {
+    console.log("FINAL: WINNER! You won " + win + " times");
+} else if (loss > win) {
+    console.log("FINAL: LOSER! You lost " + loss + " times");
+} else { console.log("FINAL: TIE no winners or losers")}
