@@ -30,20 +30,9 @@ userPlay = prompt('Play your move');
 
 computerPlay();
 
-//convert user play to numbers 
-if (userPlay === 'rock') {
-    userPlay = 0;
-}
-else if (userPlay === 'paper') {
-    userPlay = 1;
-}
-else if (userPlay === 'scissors') {
-    userPlay = 0;
-} else { alert('Invalid move, try again')}
-
 //compare the plays between human and computer 
-
     //if same tie 
+
     //if rock beats scissors 
     //if rock loses paper 
     //if scissors lose to rock 
