@@ -30,7 +30,6 @@ userPlayCaseSensitive = prompt('Play your move');
 //make move case insensitive 
 userPlay = userPlayCaseSensitive.toLowerCase();
 
-
 computerPlay();
 
 //compare the plays between human and computer 
@@ -41,27 +40,27 @@ if (userPlay === pcPlay) {
 }
     //if rock loses paper 
 else if (userPlay == 'rock' && pcPlay == "paper") {
-    alert("Loser! Rock loses to paper");
+    alert("Computer played " + pcPlay + "\n Loser! Rock loses to paper");
 }
     //if rock beats scissors 
 else if (userPlay == 'rock' && pcPlay == "scissors") {
-    alert("Winner! Rock beats scissors");
+    alert("Computer played " + pcPlay + "\n Winner! Rock beats scissors");
 }
     //if scissors lose to rock 
 else if (userPlay == 'scissors' && pcPlay == "rock") {
-    alert("Loser! scissors loses to rock");
+    alert("Computer played " + pcPlay + "\n Loser! scissors loses to rock");
 }
     //if scissors wins to paper
 else if (userPlay == 'scissors' && pcPlay == "paper") {
-    alert("Winner! scissors beats paper");
+    alert("Computer played " + pcPlay + "\n Winner! scissors beats paper");
 }   
     //if paper lose to scissors
 else if (userPlay == 'paper' && pcPlay == "scissors") {
-    alert("Loser! paper loses to scissors");
+    alert("Computer played " + pcPlay + "\n Loser! paper loses to scissors");
 }
     //if paper wins to rock
 else if (userPlay == 'paper' && pcPlay == "rock") {
-    alert("Winner! paper beats rock");
+    alert("Computer played " + pcPlay + "\n Winner! paper beats rock");
 } else { 
     alert("Invalid move, try again")
 }
