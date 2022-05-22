@@ -3,6 +3,13 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
+//ask human for their move 
+//human enters rock paper or scissors 
+//make move case insensitive 
+play = prompt('Play your move');
+console.log(play);
+
+
 //randomly generate rock paper or scissors by computer
 //assign variables to each
 //randomly choose a variable 
