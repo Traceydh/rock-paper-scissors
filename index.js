@@ -65,8 +65,16 @@ let playerSelectionCaseSensitive = prompt('Play your move');
 let playerSelection = playerSelectionCaseSensitive.toLowerCase();
 const computerSelection = computerPlay();
 
-//Play one round of game 
+//Play one round of game
 console.log(playRound(playerSelection, computerSelection));
 
 
-//keep count of 5 games 
+//Iterate game 5 times 
+for (let i = 0; i < 5; i++) {
+    
+ }
+//save and display outcome 
+console.log()
+//Count wins and losses 
+//display win or losses 
+
