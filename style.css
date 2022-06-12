@@ -6,6 +6,12 @@ body {
     justify-content: center;
     gap: 20px;
 }
+
+.button:hover {
+    background-color: black;
+    color:antiquewhite;
+    transition: 0.3s;
+}
 button {
     width: 200px;
     height: 100px;
