@@ -1,25 +1,19 @@
-//getting constants from HTML
-const rock = document.querySelector('#rock');
-const paper = document.querySelector('#paper');
-const scissors = document.querySelector('#scissors');
+//Input human's move 
+//Getting button variables from html 
+const userMoves = document.querySelectorAll('.button');
+//if any button gets clicked, perform a function 
+userMoves.forEach((move) => move.addEventListener('click',(e) => {
+    console.log(e.target.id);
+}));
 
-//get event listener for each button 
-rock.addEventListener('click', playRound);
-paper.addEventListener('click', playRound);
-scissors.addEventListener('click',playRound);
-///////////////////functions below /////////////////////////////
-
+//Generate Computer's move 
 //Random number generator 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
-//variables to keep track of score 
-let loss = 0;
-let win = 0;
-
-function playRound(playerSelection, computerSelection) {
-    //randomly generate computer's move 
+//randomly generate rock paper or scissors by computer
+function computerPlay() {
     let randomNum = getRandomInt(3);
     if (randomNum === 0)  {
         pcPlay = rock;
@@ -31,6 +25,20 @@ function playRound(playerSelection, computerSelection) {
                 pcPlay = scissors;
             }
     return pcPlay;
+}
+//Compared the two moves 
+//Display winner 
+
+
+
+
+
+//variables to keep track of score 
+let loss = 0;
+let win = 0;
+
+function playRound() {
+    
     //compare the plays between human and computer 
     //display win or lose 
     //if same tie 
