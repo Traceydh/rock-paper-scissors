@@ -43,6 +43,7 @@ function playRound(playerSelection) {
     //display win or lose 
     //if same tie 
     if (playerSelection === computerSelection) {
+        tie ++;
     }
         //if rock loses paper 
     else if (playerSelection == 'rock' && computerSelection == 'paper') {
