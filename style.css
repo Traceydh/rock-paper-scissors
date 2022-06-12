@@ -20,9 +20,9 @@ button {
 }
 
 .final {
-    height: 200px;
-    background-color: black;
-    color: antiquewhite;
     font-size: 100px;
+}
 
+.wins, .loses, .tie, .tally {
+    font-size: 30px;
 }
