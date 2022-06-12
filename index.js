@@ -14,12 +14,13 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
-//randomly generate rock paper or scissors by computer
-//assign variables to each
-//randomly choose a variable 
-function computerPlay() {
-    let randomNum = getRandomInt(3);
+//variables to keep track of score 
+let loss = 0;
+let win = 0;
 
+function playRound(playerSelection, computerSelection) {
+    //randomly generate computer's move 
+    let randomNum = getRandomInt(3);
     if (randomNum === 0)  {
         pcPlay = rock;
     }
@@ -30,14 +31,6 @@ function computerPlay() {
                 pcPlay = scissors;
             }
     return pcPlay;
-}
-
-//variables to keep track of score 
-let loss = 0;
-let win = 0;
-
-function playRound(playerSelection, computerSelection) {
-    
     //compare the plays between human and computer 
     //display win or lose 
     //if same tie 
@@ -84,8 +77,6 @@ function playRound(playerSelection, computerSelection) {
     } else { 
         alert("Invalid move, try again")
     }
-    
-
   }
 
 
