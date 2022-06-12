@@ -9,6 +9,8 @@ const loses = document.querySelector('.loses');
 const ties = document.querySelector('.tie'); 
 const computerChoice = document.querySelector('.computerChoice');
 const yourChoice = document.querySelector('yourChoice');
+const won = document.querySelector('#won');
+const lost = document.querySelector('#lost');
 //if any button gets clicked, perform a function 
 userMoves.forEach((move) => move.addEventListener('click',(e) => {
     userMove = e.target.id; 
@@ -78,5 +80,11 @@ function playRound(playerSelection) {
     wins.textContent = win;
     loses.textContent = loss;
     ties.textContent = tie;
+
+    if (win == 5) {
+        won.textContent = "You beat the computer!! AMAZING";
+    } else if (loss == 5) {
+        lost.textContent = "You lost to the computer....";
+    }
   }
 
