@@ -67,7 +67,7 @@ function playRound(playerSelection) {
     ties.textContent = tie;
 
     if (win == 5) {
-        won.textContent = "You beat the computer!! AMAZING";
+        won.textContent = "You beat the computer!!";
     } else if (loss == 5) {
         lost.textContent = "You lost to the computer....";
     }
