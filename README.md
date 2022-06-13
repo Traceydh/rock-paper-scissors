@@ -5,4 +5,8 @@
  Through this project I've learnt and practiced how to use variables, functions and conditionals statements. 
  
  I hope to come back to this project soon to improve it's interface. 
+ 
+ 
+ Project Rock Paper Scirrors part 2
+This was a great project to consolidate my knowledge on DOM manipulation methods. It was also good practice for CSS styling and problem solving skills. I now have a better understanding on how to develop a functional user interface. 
 
