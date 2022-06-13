@@ -41,38 +41,25 @@ function playRound(playerSelection) {
     else {
          computerSelection = 'scissors';
     }
-    //compare the plays between human and computer 
-    //display win or lose 
-    //if same tie 
-    if (playerSelection === computerSelection) {
-        tie ++;
+    //compare results to determine winner or loser 
+    switch (playerSelection + computerSelection) {
+        case 'rockpaper':
+        case 'scissorspaper': 
+        case 'paperscissors':
+            loss ++;
+            break;
+        case 'paperrock':
+        case 'paperscissors':
+        case 'scissorspaper':
+            win ++
+            break;
+        case 'paperpaper':
+        case 'scissorsscissors':
+        case 'rockrock':
+            tie ++
+            break;
     }
-        //if rock loses paper 
-    else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        loss ++; 
-    }
-        //if rock beats scissors 
-    else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        win ++;
-    }
-        //if scissors lose to rock 
-    else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-        loss ++;
-    }
-        //if scissors wins to paper
-    else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        win ++;
-    }   
-        //if paper lose to scissors
-    else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        loss ++;
-    }
-        //if paper wins to rock
-    else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        win ++;
-    } else { 
-        alert("Invalid move, try again")
-    }
+
 
     //display results 
   console.log(userMove);
