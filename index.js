@@ -24,7 +24,6 @@ let loss = 0;
 let win = 0;
 let tie = 0;
 
-
 //Generate Computer's move 
 //Random number generator 
 function getRandomInt(max) {
@@ -59,7 +58,6 @@ function playRound(playerSelection) {
             tie ++
             break;
     }
-
 
     //display results 
   console.log(userMove);

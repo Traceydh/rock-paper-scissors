@@ -8,22 +8,35 @@
     </head>
 
     <body>
-
-        <h2>Choose your weapon</h2>
-        <div class="buttons">
-            <button class="button" id="rock">ROCK</button>
-            <button class="button" id="paper">PAPER</button>
-            <button class="button" id="scissors">SCISSORS</button>
+        <div class="container">
+            <div class="weapons">
+                <h2>Choose Your Weapon</h2>
+                <div class="buttons">
+                    <button class="button" id="rock"><img id="rockimage" src="rock.png"> ROCK</button>
+                    <button class="button" id="paper"><img src="paper.png">PAPER</button>
+                    <button class="button" id="scissors"><img src="scissors.png">SCISSORS</button>
+                </div>
+            </div>
+            <div class="computer">
+                <h2>Computer Chose<span class="computerChoice"></span></h2>
+            </div>
+            <div class="results">
+                <h2>Score Board</h2>
+                <div class="scores">
+                    <div class="tally" >Wins
+                        <div class="wins"> </div>
+                    </div>
+                    <div class="tally">Loses
+                        <div class="loses"> </div>
+                    </div>
+                    <div class="tally">Ties
+                        <div class="tie"> </div>
+                    </div>
+                </div>
+                <div class="final" id="won"></div>
+                <div class="final" id="lost"></div>
+            </div>
         </div>
-        <h2>Computer used: <span class="computerChoice"></span></h2>
-
-        <h2>Results</h2>
-            <div class="tally" >Wins: <span class="wins"> </span></div>
-            <div class="tally">Loses: <span class="loses"> </span></div>
-            <div class="tally">Ties: <span class="tie"> </span></div>
-
-       <div class="final" id="won"></div>
-       <div class="final" id="lost"></div>
         
 
     </body>
