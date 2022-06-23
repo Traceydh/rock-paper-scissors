@@ -13,3 +13,4 @@ Future improvement ideas
 - display final results after 5 rounds as pop up window, when user closes it the score refreshes
 - computer choice is displayed as image instead of text 
 
+Check out live demo [here](https://traceydh.github.io/rock-paper-scissors/)
