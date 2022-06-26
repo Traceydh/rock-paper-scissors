@@ -8,17 +8,31 @@ const wins = document.querySelector('.wins');
 const loses = document.querySelector('.loses'); 
 const ties = document.querySelector('.tie'); 
 const computerChoice = document.querySelector('.computerChoice');
+const humanChoice = document.querySelector('.humanChoice');
 const yourChoice = document.querySelector('yourChoice');
 const won = document.querySelector('#won');
 const lost = document.querySelector('#lost');
 
 //create element image 
-const img = document.createElement("img");
-computerChoice.append(img);
+const imgComputer = document.createElement("img");
+computerChoice.append(imgComputer);
+const imgHuman = document.createElement("img");
+humanChoice.append(imgHuman);
 
 //if any button gets clicked, perform a function 
 userMoves.forEach((move) => move.addEventListener('click',(e) => {
     userMove = e.target.id; 
+    switch (userMove) {
+        case 'paper': 
+            imgHuman.src = 'paper.png';
+            break
+        case 'rock':
+            imgHuman.src = 'rock.png';
+            break
+        case 'scissors':
+            imgHuman.src = 'scissors.png';
+            break
+    }
     playRound(userMove);
 }));
 
@@ -68,24 +82,14 @@ function playRound(playerSelection) {
     let displayPcResults; 
     switch (randomNum) {
         case 0:
-            img.src = "rock.png"
+            imgComputer.src = "rock.png"
             break
         case 1:
-            img.src = "paper.png";
+            imgComputer.src = "paper.png";
             break
         case 2: 
-            img.src = "scissors.png";
+        imgComputer.src = "scissors.png";
             break
-    }
-    //computerChoice.textContent = computerSelection;
-    wins.textContent = win;
-    loses.textContent = loss;
-    ties.textContent = tie;
-
-    if (win == 5) {
-        won.textContent = "You beat the computer!!";
-    } else if (loss == 5) {
-        lost.textContent = "You lost to the computer....";
     }
   }
 
