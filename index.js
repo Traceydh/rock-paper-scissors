@@ -61,15 +61,18 @@ function playRound(playerSelection) {
         case 'scissorspaper': 
         case 'paperscissors':
             computerWins ++;
+            displayRound.textContent = 'You lost ...';
             break;
         case 'paperrock':
         case 'paperscissors':
         case 'scissorspaper':
             humanWins ++
+            displayRound.textContent = 'You won !!!';
             break;
         case 'paperpaper':
         case 'scissorsscissors':
         case 'rockrock':
+            displayRound.textContent = 'It\'s a tie';
             break;
     }
 
