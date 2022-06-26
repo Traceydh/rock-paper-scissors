@@ -7,10 +7,8 @@
  I hope to come back to this project soon to improve it's interface. 
  
  
- Project Rock Paper Scirrors part 2
-This was a great project to consolidate my knowledge on DOM manipulation methods. It was also good practice for CSS styling and problem solving skills. I now have a better understanding on how to develop a functional user interface. 
-Future improvement ideas
-- display final results after 5 rounds as pop up window, when user closes it the score refreshes
-- computer choice is displayed as image instead of text 
+ Project Rock Paper Scissors part 2
+After learning more about DOM manipulation methods I was able to improve the project by adding interactive user buttons, dynamic image display of results and make code logic more coherent and clean. 
+This was a great project to consolidate my new knowledge on DOM manipulation methods. It was also good practice for CSS styling and problem solving skills. I now have a better understanding on how to develop a functional user interface. 
 
 Check out live demo [here](https://traceydh.github.io/rock-paper-scissors/)
