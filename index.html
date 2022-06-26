@@ -5,44 +5,55 @@
         <title>Rock paper scissors game</title>
         <script src="index.js" defer></script>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Roboto+Mono:ital,wght@0,200;0,400;0,500;1,600&display=swap" rel="stylesheet">   
     </head>
 
     <body>
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
         <div class="container">
-            <div class="weapons">
-                <h2>Choose Your Weapon</h2>
-                <div class="buttons">
-                    <button class="button" id="rock"><img id="rock" src="rock.png"> ROCK</button>
-                    <button class="button" id="paper"><img id="paper" src="paper.png"> PAPER</button>
-                    <button class="button" id="scissors"><img id="scissors" src="scissors.png"> SCISSORS</button>
-                </div>
+            <div class="human">
+                <h2>You Chose</h2>
+                <div class="humanChoice"></div>
             </div>
+            <div class="vs">vs</div>
             <div class="computer">
-                <h2>Computer Chose
-                    <div class="computerChoice"></div>
-                </h2>
-            </div>
-            <div class="results">
-                <h2>Score Board</h2>
-                <div class="scores">
-                    <div class="tally" >Wins
-                        <div class="wins"> </div>
-                    </div>
-                    <div class="tally">Losses
-                        <div class="loses"> </div>
-                    </div>
-                    <div class="tally">Ties
-                        <div class="tie"> </div>
-                    </div>
-                </div>
-                <div class="final" id="won">
-                </div>
-                <div class="final" id="lost">
-                </div>
-                <div id="overlay"></div>
+                <h2>Computer Chose</h2>
+                <div class="computerChoice"></div>
             </div>
         </div>
-        
+        <div>
+
+        </div>
+        <div class="weapons">
+            <div class="buttons">
+                <button class="button" id="rock"><img id="rock" src="rock.png"> ROCK</button>
+                <button class="button" id="paper"><img id="paper" src="paper.png"> PAPER</button>
+                <button class="button" id="scissors"><img id="scissors" src="scissors.png"> SCISSORS</button>
+            </div>
+        </div>
+        <div class="results">
+            <h2>Score Board</h2>
+            <div class="scores">
+                <div class="tally" >Wins
+                    <div class="wins"> </div>
+                </div>
+                <div class="tally">Losses
+                    <div class="loses"> </div>
+                </div>
+                <div class="tally">Ties
+                    <div class="tie"> </div>
+                </div>
+            </div>
+            <div class="final" id="won">
+            </div>
+            <div class="final" id="lost">
+            </div>
+            <div id="overlay"></div>
+        </div>
 
     </body>
 </html>

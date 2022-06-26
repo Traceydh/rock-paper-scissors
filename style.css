@@ -1,11 +1,32 @@
 body {
     text-align: center;
-    background-color: purple;
-}
-.container {
+    background-color: lightcyan;
     display: flex;
     flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+header {
+    background-color: #2C6975;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rebeccapurple;
+    gap: 30px;
+}
+
+.vs {
+    font-size: 40px;
 }
 
 .buttons {
