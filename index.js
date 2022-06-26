@@ -11,13 +11,16 @@ const computerChoice = document.querySelector('.computerChoice');
 const yourChoice = document.querySelector('yourChoice');
 const won = document.querySelector('#won');
 const lost = document.querySelector('#lost');
+
+//create element image 
+const img = document.createElement("img");
+computerChoice.append(img);
+
 //if any button gets clicked, perform a function 
 userMoves.forEach((move) => move.addEventListener('click',(e) => {
     userMove = e.target.id; 
     playRound(userMove);
 }));
-
-
 
 //variables to keep track of score 
 let loss = 0;
@@ -60,8 +63,21 @@ function playRound(playerSelection) {
     }
 
     //display results 
-  console.log(userMove);
-    computerChoice.textContent = computerSelection;
+    //Select div that will house image 
+    //display image that computer chooses 
+    let displayPcResults; 
+    switch (randomNum) {
+        case 0:
+            img.src = "rock.png"
+            break
+        case 1:
+            img.src = "paper.png";
+            break
+        case 2: 
+            img.src = "scissors.png";
+            break
+    }
+    //computerChoice.textContent = computerSelection;
     wins.textContent = win;
     loses.textContent = loss;
     ties.textContent = tie;
