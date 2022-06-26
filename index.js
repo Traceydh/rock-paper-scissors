@@ -11,12 +11,21 @@ const computerChoice = document.querySelector('.computerChoice');
 const humanChoice = document.querySelector('.humanChoice');
 const yourChoice = document.querySelector('yourChoice');
 
-
-//create element image 
+//create element image to what player and computer chose 
 const imgComputer = document.createElement("img");
 computerChoice.append(imgComputer);
 const imgHuman = document.createElement("img");
 humanChoice.append(imgHuman);
+
+//create element that pops up when someone wins 5 times 
+const finalResults = document.createElement("div"); 
+finalResults.classList.add("final-results");
+
+//create element in JS
+//add class
+//use class to style 
+//add text 
+//append div to page 
 
 //if any button gets clicked, perform a function 
 userMoves.forEach((move) => move.addEventListener('click',(e) => {
@@ -93,17 +102,16 @@ function playRound(playerSelection) {
         //stop the game when someone wins 5 times 
         if (humanWins == 5) {
             //pop up you won! replay? 
-            console.log('win');
+            alert('You won! play again');
             humanWins = 0;
             computerWins = 0;
             
         } else if (computerWins == 5) {
-            console.log('lsot');
+            alert('You lost... play again');
             humanWins = 0;
             computerWins = 0;
         }
-        console.log(humanWins, computerWins);
-
+        
     //Display the result of this round 
     humanScore.textContent = 'Wins: ' + humanWins;
     computerScore.textContent = 'Wins: ' + computerWins;
