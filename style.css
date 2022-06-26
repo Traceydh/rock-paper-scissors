@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: aliceblue;
+    background-color: purple;
 }
 .container {
     display: flex;
@@ -13,20 +13,22 @@ body {
     justify-content: center;
     gap: 30px;
     margin: 40px 0;
+
 }
 
 .button:hover {
     transition: 0.5s;
     transform: scale(1.2);
-    border: solid;
-    border-color: lightgreen;
 }
+
 button {
     width: 200px;
     height: 200px;
     font-size: 30px;
     border: none;
-    background-color: aliceblue;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none; 
 }
 
 img {
