@@ -13,16 +13,19 @@
     <body>
         <header>
             <h1>Rock Paper Scissors</h1>
+            <p>Choose wisely, first to 5 games is the winner</p>
         </header>
         <div class="container">
             <div class="human">
                 <h2>You Chose</h2>
                 <div class="humanChoice"></div>
+                <div class="human-score">Wins: </div>
             </div>
             <div class="vs">vs</div>
             <div class="computer">
                 <h2>Computer Chose</h2>
                 <div class="computerChoice"></div>
+                <div class="computer-score">Wins: </div>
             </div>
         </div>
         <div>
@@ -34,25 +37,6 @@
                 <button class="button" id="paper"><img id="paper" src="paper.png"> PAPER</button>
                 <button class="button" id="scissors"><img id="scissors" src="scissors.png"> SCISSORS</button>
             </div>
-        </div>
-        <div class="results">
-            <h2>Score Board</h2>
-            <div class="scores">
-                <div class="tally" >Wins
-                    <div class="wins"> </div>
-                </div>
-                <div class="tally">Losses
-                    <div class="loses"> </div>
-                </div>
-                <div class="tally">Ties
-                    <div class="tie"> </div>
-                </div>
-            </div>
-            <div class="final" id="won">
-            </div>
-            <div class="final" id="lost">
-            </div>
-            <div id="overlay"></div>
         </div>
 
     </body>
