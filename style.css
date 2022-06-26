@@ -5,6 +5,7 @@ body {
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto Mono', monospace;
+    margin: 0;
 }
 
 header {
@@ -25,7 +26,6 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rebeccapurple;
     gap: 30px;
 }
 
