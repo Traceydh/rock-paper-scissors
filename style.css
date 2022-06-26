@@ -29,6 +29,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-shadow: 3px 2px 2px#68B2A0;
 }
 
 .container {
@@ -84,8 +85,8 @@ h2 {
     font-size: 30px;
 }
 
-.computerChoice {
-
+.weapons {
+    margin-top: 50px;
 }
 
 .results {
