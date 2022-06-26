@@ -87,7 +87,7 @@ function playRound(playerSelection) {
             displayRound.textContent = 'You lost ...';
             break;
         case 'paperrock':
-        case 'paperscissors':
+        case 'rockscissors':
         case 'scissorspaper':
             humanWins ++
             displayRound.textContent = 'You won !!!';
@@ -98,7 +98,7 @@ function playRound(playerSelection) {
             displayRound.textContent = 'It\'s a tie';
             break;
     }
-
+  
         //stop the game when someone wins 5 times 
         if (humanWins == 5) {
             //pop up you won! replay? 
@@ -111,10 +111,14 @@ function playRound(playerSelection) {
             humanWins = 0;
             computerWins = 0;
         }
-        
+          
     //Display the result of this round 
     humanScore.textContent = 'Wins: ' + humanWins;
     computerScore.textContent = 'Wins: ' + computerWins;
-  }
 
+    //display what made player lose or win in the dsplay box 
+    //says winner or loser
+    //restarts game 
+
+  }
 
