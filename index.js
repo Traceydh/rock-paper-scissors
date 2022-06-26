@@ -4,14 +4,13 @@ let userMove;
 //Getting button variables from html 
 const userMoves = document.querySelectorAll('.button');
 // store results 
-const wins = document.querySelector('.wins'); 
-const loses = document.querySelector('.loses'); 
-const ties = document.querySelector('.tie'); 
+const humanScore = document.querySelector('.human-score');
+const computerScore = document.querySelector('.computer-score');
+const displayRound = document.querySelector('.display-round');
 const computerChoice = document.querySelector('.computerChoice');
 const humanChoice = document.querySelector('.humanChoice');
 const yourChoice = document.querySelector('yourChoice');
-const won = document.querySelector('#won');
-const lost = document.querySelector('#lost');
+
 
 //create element image 
 const imgComputer = document.createElement("img");
@@ -37,9 +36,8 @@ userMoves.forEach((move) => move.addEventListener('click',(e) => {
 }));
 
 //variables to keep track of score 
-let loss = 0;
-let win = 0;
-let tie = 0;
+let humanWins = 0;
+let computerWins = 0;
 
 //Generate Computer's move 
 //Random number generator 
@@ -62,24 +60,20 @@ function playRound(playerSelection) {
         case 'rockpaper':
         case 'scissorspaper': 
         case 'paperscissors':
-            loss ++;
+            computerWins ++;
             break;
         case 'paperrock':
         case 'paperscissors':
         case 'scissorspaper':
-            win ++
+            humanWins ++
             break;
         case 'paperpaper':
         case 'scissorsscissors':
         case 'rockrock':
-            tie ++
             break;
     }
 
-    //display results 
-    //Select div that will house image 
-    //display image that computer chooses 
-    let displayPcResults; 
+    //display what the computer chose 
     switch (randomNum) {
         case 0:
             imgComputer.src = "rock.png"
@@ -91,5 +85,8 @@ function playRound(playerSelection) {
         imgComputer.src = "scissors.png";
             break
     }
+    //Display the result of this round 
+    humanScore.textContent = 'Wins: ' + humanWins;
+    computerScore.textContent = 'Wins: ' + computerWins;
   }
 
