@@ -55,6 +55,20 @@ function playRound(playerSelection) {
     else {
          computerSelection = 'scissors';
     }
+
+    //display what the computer chose 
+    switch (randomNum) {
+        case 0:
+            imgComputer.src = "rock.png"
+            break
+        case 1:
+            imgComputer.src = "paper.png";
+            break
+        case 2: 
+        imgComputer.src = "scissors.png";
+            break
+    }
+
     //compare results to determine winner or loser 
     switch (playerSelection + computerSelection) {
         case 'rockpaper':
@@ -76,20 +90,23 @@ function playRound(playerSelection) {
             break;
     }
 
-    //display what the computer chose 
-    switch (randomNum) {
-        case 0:
-            imgComputer.src = "rock.png"
-            break
-        case 1:
-            imgComputer.src = "paper.png";
-            break
-        case 2: 
-        imgComputer.src = "scissors.png";
-            break
-    }
+        //stop the game when someone wins 5 times 
+        if (humanWins == 5) {
+            //pop up you won! replay? 
+            console.log('win');
+            humanWins = 0;
+            computerWins = 0;
+            
+        } else if (computerWins == 5) {
+            console.log('lsot');
+            humanWins = 0;
+            computerWins = 0;
+        }
+        console.log(humanWins, computerWins);
+
     //Display the result of this round 
     humanScore.textContent = 'Wins: ' + humanWins;
     computerScore.textContent = 'Wins: ' + computerWins;
   }
+
 
