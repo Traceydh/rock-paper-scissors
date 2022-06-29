@@ -81,14 +81,14 @@ function playRound(playerSelection) {
     //compare results to determine winner or loser 
     switch (playerSelection + computerSelection) {
         case 'rockpaper':
-        case 'scissorspaper': 
-        case 'paperscissors':
+        case 'paperscissors': 
+        case 'scissorsrock':
             computerWins ++;
             displayRound.textContent = 'You lost ...';
             break;
         case 'paperrock':
-        case 'rockscissors':
         case 'scissorspaper':
+        case 'rockscissors':
             humanWins ++
             displayRound.textContent = 'You won !!!';
             break;
