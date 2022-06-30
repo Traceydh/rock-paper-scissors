@@ -119,6 +119,7 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%) scale(0);
+    transition: 0.2s ease-in-out;
     border: 2px solid black;
     border-radius: 20px;
     z-index: 10;
@@ -175,6 +176,7 @@ h2 {
     bottom: 0; 
     background-color: rgba(0, 0, 0, 50%);
     pointer-events: none;
+    transition: 0.2s ease-in-out;
 }
 
 #overlay.active {

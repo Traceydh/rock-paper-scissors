@@ -17,15 +17,10 @@ computerChoice.append(imgComputer);
 const imgHuman = document.createElement("img");
 humanChoice.append(imgHuman);
 
-//create element that pops up when someone wins 5 times 
-const finalResults = document.createElement("div"); 
-finalResults.classList.add("final-results");
-
-//create element in JS
-//add class
-//use class to style 
-//add text 
-//append div to page 
+//select elements for modal 
+const finalDisplay = document.querySelector(".final");
+const modal = document.querySelector("#modal");
+const overlay = document.querySelector("#overlay");
 
 //if any button gets clicked, perform a function 
 userMoves.forEach((move) => move.addEventListener('click',(e) => {
@@ -102,11 +97,11 @@ function playRound(playerSelection) {
         //stop the game when someone wins 5 times 
         if (humanWins == 5) {
             //pop up you won! replay? 
-            alert('You won! play again');
+            finalDisplay.textContent = 'You won!';
             reset()
             
         } else if (computerWins == 5) {
-            alert('You lost... play again');
+            finalDisplay.textContent = 'You lost...';
             reset()
         }
           
@@ -120,6 +115,9 @@ function playRound(playerSelection) {
   }
 
   function reset() {
+    //add active class to modal and overlay
+    modal.classList.add("active");
+    overlay.classList.add("active");
     humanWins = 0;
     computerWins = 0;
     imgComputer.src = "";
