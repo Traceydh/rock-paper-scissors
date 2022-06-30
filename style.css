@@ -112,3 +112,53 @@ h2 {
 .humanChoice, .computerChoice {
     height: 150px;
 }
+
+/*MODAL style*/
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #2C6975;
+    color: white;
+    /*doesn't get bigger than 80% of screen and max 300px*/
+    width: 250px;
+    height: 190px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.final {
+    font-size: 35px;
+    margin: 0 auto;
+    padding-left: 30px;
+    font-weight: 700;
+}
+
+.reset {
+    height: 50px;
+    width: 160px;
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: #E0ECDE;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.close-button {
+    height: 25px;
+    width: 25px;
+    margin-top: -25px;
+    margin-right: 5px;
+}
