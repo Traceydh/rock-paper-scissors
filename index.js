@@ -105,11 +105,17 @@ function playRound(playerSelection) {
             alert('You won! play again');
             humanWins = 0;
             computerWins = 0;
+            imgComputer.src = "";
+            imgHuman.src = '';
+            displayRound.textContent = '';
             
         } else if (computerWins == 5) {
             alert('You lost... play again');
             humanWins = 0;
             computerWins = 0;
+            imgComputer.src = "";
+            imgHuman.src = '';
+            displayRound.textContent = '';
         }
           
     //Display the result of this round 
