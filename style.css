@@ -183,3 +183,8 @@ h2 {
     pointer-events: all;
     opacity: 1;
 }
+
+#overlay.remove {
+    pointer-events: all;
+    opacity: 0;
+}

@@ -123,6 +123,7 @@ function playRound(playerSelection) {
   function remove() {
     modal.classList.remove("active");
     overlay.classList.remove("active");
+    overlay.classList.add("remove");
   }
 
   function reset() {
