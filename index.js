@@ -103,19 +103,11 @@ function playRound(playerSelection) {
         if (humanWins == 5) {
             //pop up you won! replay? 
             alert('You won! play again');
-            humanWins = 0;
-            computerWins = 0;
-            imgComputer.src = "";
-            imgHuman.src = '';
-            displayRound.textContent = '';
+            reset()
             
         } else if (computerWins == 5) {
             alert('You lost... play again');
-            humanWins = 0;
-            computerWins = 0;
-            imgComputer.src = "";
-            imgHuman.src = '';
-            displayRound.textContent = '';
+            reset()
         }
           
     //Display the result of this round 
@@ -125,6 +117,13 @@ function playRound(playerSelection) {
     //display what made player lose or win in the dsplay box 
     //says winner or loser
     //restarts game 
+  }
 
+  function reset() {
+    humanWins = 0;
+    computerWins = 0;
+    imgComputer.src = "";
+    imgHuman.src = '';
+    displayRound.textContent = '';
   }
 
