@@ -98,30 +98,43 @@ function playRound(playerSelection) {
         if (humanWins == 5) {
             //pop up you won! replay? 
             finalDisplay.textContent = 'You won!';
-            reset()
+            add();
             
         } else if (computerWins == 5) {
-            finalDisplay.textContent = 'You lost...';
-            reset()
+            finalDisplay.textContent = 'You lost';
+            add();
         }
           
     //Display the result of this round 
     humanScore.textContent = 'Wins: ' + humanWins;
     computerScore.textContent = 'Wins: ' + computerWins;
+  }
 
-    //display what made player lose or win in the dsplay box 
-    //says winner or loser
-    //restarts game 
+  const resetButton = document.querySelector(".reset");
+  resetButton.onclick = reset;
+  const closeButton = document.querySelector(".close-button");
+  closeButton.addEventListener("click", remove);
+
+  function add() {
+    modal.classList.add("active");
+    overlay.classList.add("active");
+  }
+
+  function remove() {
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
   }
 
   function reset() {
-    //add active class to modal and overlay
-    modal.classList.add("active");
-    overlay.classList.add("active");
+    remove();
     humanWins = 0;
     computerWins = 0;
     imgComputer.src = "";
     imgHuman.src = '';
     displayRound.textContent = '';
+    //Display the result of this round 
+    humanScore.textContent = 'Wins: ' + humanWins;
+    computerScore.textContent = 'Wins: ' + computerWins;
   }
+
 
